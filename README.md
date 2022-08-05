@@ -1,11 +1,21 @@
 # yr32infra
 
-```
-Renovate
-  v Notify: Pull Request
-GitHub <-> Merge
-  v Notify: WebHook
-portainer.io @ own server
-  v Deploy: docker socket
-Docker Service @ own server
+```mermaid
+graph TD;
+    subgraph Cloud
+    Renovate-->GitHub
+    GitHub-->Renovate
+    end
+    
+    subgraph mitou
+    m_compose-cd--Polling-->GitHub
+    GitHub--WebHook-->m_portainer.io
+    m_compose-cd--Deploy-->m_docker
+    m_portainer.io--Deploy-->m_docker
+    end
+      
+    subgraph arch
+    a_compose-cd--Polling-->GitHub
+    a_compose-cd--Deploy-->a_docker
+    end
 ```
