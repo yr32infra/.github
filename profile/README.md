@@ -1,6 +1,6 @@
 # yr32infra
 
-https://github.com/orgs/yr32infra/projects/1
+[Kanban is here!](https://github.com/orgs/yr32infra/projects/1)
 
 ```mermaid
 graph TD;
