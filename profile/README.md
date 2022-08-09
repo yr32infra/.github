@@ -1,5 +1,7 @@
 # yr32infra
 
+https://github.com/orgs/yr32infra/projects/1
+
 ```mermaid
 graph TD;
     subgraph GitHub Server
@@ -24,3 +26,4 @@ graph TD;
     m_compose-cd--WebHook-->Channel
     end
 ```
+
