@@ -11,9 +11,7 @@ graph TD;
     
     subgraph mitou Server
     m_compose-cd--Polling-->GitHub
-    GitHub--WebHook-->m_portainer.io
     m_compose-cd--Deploy-->m_docker
-    m_portainer.io--Deploy-->m_docker
     end
       
     subgraph arch Server
