@@ -9,6 +9,11 @@ graph TD;
     GitHub-->Renovate
     end
     
+    subgraph oraclecloud Server
+    o_compose-cd--Polling-->GitHub
+    o_compose-cd--Deploy-->o_docker
+    end
+
     subgraph mitou Server
     m_compose-cd--Polling-->GitHub
     m_compose-cd--Deploy-->m_docker
@@ -22,6 +27,7 @@ graph TD;
     subgraph Discord
     a_compose-cd--WebHook-->Channel
     m_compose-cd--WebHook-->Channel
+    o_compose-cd--WebHook-->Channel
     end
 ```
 
